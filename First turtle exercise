@@ -1,0 +1,20 @@
+import turtle
+import colorsys
+
+my_turtle = turtle.Turtle()
+my_turtle_screen = turtle.Screen()
+my_turtle_screen.bgcolor("black")
+my_turtle.speed('fastest')
+n = 10
+h = 0
+
+for _ in range(360):
+    c = colorsys.hsv_to_rgb(h, 1, 0.8)
+    h += 1/n
+    my_turtle.color(c)
+    
+    for j in range(4):
+        my_turtle.forward(100)
+        my_turtle.right(90)
+    my_turtle.right(1)
+
